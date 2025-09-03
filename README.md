@@ -76,3 +76,32 @@
 - Service Requests QA → ensures compliance & prevention of new risks.
 - Change Requests QA → ensures deployments don’t violate SLOs.
 Together, QA is the guardrail for reliability in SRE.
+
+## 1. SLA, SLO, SLI Recap
+- SLA (Service Level Agreement) → Contractual agreement with customers (e.g., 99.9% uptime per month).
+- SLO (Service Level Objective) → Internal reliability target (e.g., 99.95% uptime per month).
+- SLI (Service Level Indicator) → Metric to measure performance (e.g., % of successful HTTP requests).
+
+🔗 Reporting ties these together: SLIs → SLOs → SLA compliance.
+
+## 2. KPIs (Key Performance Indicators) in DevOps/SRE
+- KPIs are operational metrics that help track engineering effectiveness.
+- Typical DevOps/SRE KPIs include:
+
+**Incident Management KPIs:**
+- MTTR (Mean Time to Resolve)
+- MTTA (Mean Time to Acknowledge)
+- % of incidents resolved within SLA
+
+**Change Management KPIs:**
+- Change success rate (% of changes without incident)
+- % of emergency changes vs planned changes
+- Deployment frequency (DORA metric)
+
+**Service Request KPIs:**
+- Average request fulfillment time
+- % fulfilled within SLA
+
+**Reliability KPIs (SRE):**
+- Error budget consumption
+ % of time within latency/availability SLO
