@@ -1,4 +1,4 @@
-# Incident Management
+# Incident, Service and Change Management
 
 ## 1. Quality Assurance of Incidents
 - Incidents are unplanned interruptions or degradation of a service. 
@@ -59,3 +59,15 @@
   ✅ Did post-deployment checks confirm service health?
 
 ➡️ Why QA matters: Without QA, a bad deployment could cause outages, and rollback might fail.
+
+| Process              | QA Focus                               | SRE Link                                      | Example                                      |
+| -------------------- | -------------------------------------- | --------------------------------------------- | -------------------------------------------- |
+| **Incidents**        | Correct RCA, documentation, prevention | Protect SLOs, track error budget usage        | TLS cert expiry → automation prevents repeat |
+| **Service Requests** | Secure, approved, least privilege      | Prevent hidden risks to reliability           | Log access → read-only to avoid misuse       |
+| **Change Requests**  | Testing, rollback, controlled rollout  | Prevent SLO violations, preserve error budget | Canary deploy → rollback if latency > SLO    |
+
+✅ Takeaway:
+- Incidents QA → ensures error budget usage is tracked and minimized.
+- Service Requests QA → ensures compliance & prevention of new risks.
+- Change Requests QA → ensures deployments don’t violate SLOs.
+Together, QA is the guardrail for reliability in SRE.
