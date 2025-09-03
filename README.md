@@ -13,10 +13,15 @@
 - Scenario: Kubernetes cluster goes down because of an expired TLS certificate.
 
 **Incident QA checks:**
+
 ✅ Was the incident logged in the tracking tool (like ServiceNow, Jira, PagerDuty)?
+
 ✅ Was severity correctly assigned (Sev-1, Sev-2)?
+
 ✅ Were escalation procedures followed? (ex: escalation to on-call SRE within 15 mins)
+
 ✅ Were mitigation steps (e.g., renewing the TLS cert manually) documented clearly?
+
 ✅ Was a postmortem written with preventive measures (automated cert renewal in pipeline)?
 
 ➡️ Why QA matters: Without QA, the same TLS expiration issue could recur in production.
